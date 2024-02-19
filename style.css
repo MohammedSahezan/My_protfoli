@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    /* background-color: var(--color-greye-3); */
+    color: var(--color-white);
+    font-size: 1.1rem;
+}
+
+body {
+    transition: all .4s ease-in-out;
+}
+
+:root {
+    --color-primary: #191d2b;
+    --color-secondary: #27AE60;
+    --color-white: #FFFFFF;
+    --colot-black: #000;
+    --color-greye0: #fafafa;
+    --color-greye-1: #dbe1e8;
+    --color-greye-2: #b2becd;
+    --color-greye-3: #6c7983;
+    --color-greye-4: #454e56;
+    --color-greye-5: #2a2e35;
+    --color-greye-6: #12181b;
+    --shadow-box: 0 3px 15px rgba(0, 0, 0, .2);
+    --br-sm-2: 14px;
+}
+.fa-solid i {
+    background-color: var(--color-secondary);
+}
+
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+header {
+    height: 100vh;
+    color: var(--color-white);
+    overflow: hidden;
+    gap: 20px;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3rem 18rem;
+
+}
+
+.section {
+    transform: translateY(-100%) scale(0);
+    transition: all .4s ease-in-out;
+    background-color: var(--color-primary);
+
+}
+
+.sec1 {
+    display: none;
+    transform: translateY(0) scale(1);
+    /* background-color: #000814; */
+
+}
+
+.sec2 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: #001D3D;
+
+}
+
+.sec3 {
+    display: none;
+    transform: translateY(0) scale(1);
+
+}
+
+.sec4 {
+    display: none;
+    transform: translateY(0) scale(1);
+
+}
+
+.sec5 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: rgb(68, 68, 155);
+
+}
+
+.active {
+    display: block;
+    animation: anim 1s ease-in-out;
+
+}
+
+@keyframes anim {
+    0% {
+        transform: translateY(-100%) scaley(0)
+    }
+
+    100% {
+        transform: translateY(0) scaley(1)
+    }
+}
+
+/*controls*/
+
+.controls {
+
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    background-color: transparent;
+}
+
+.control {
+    padding: 1.1rem;
+    cursor: pointer;
+    /* width: 50%; */
+    height: 50%;
+    border-radius: 50%;
+    background-color: var(--color-greye-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    margin: .4rem 0;
+    box-shadow: var(--shadow-box);
+
+}
+
+.active-btn {
+    background-color: var(--color-secondary) !important;
+    transition: all .4s ease-in-out;
+
+}
+
+i {
+    background: transparent;
+    background-color: var(--color-greye-4);
+    pointer-events: none;
+    box-sizing: none;
+
+}
+
+/*header content*/
+
+/*Header-content*/
+.header-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+}
+
+.header-content .left-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-content .left-content .head-shep {
+    transition: all 0.4s ease-in-out;
+    width: 65%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+}
+
+.header-content .left-content .imgs {
+    border-radius: var(--br-sm-2);
+    height: 90%;
+    width: 68%;
+    margin-left: 4rem;
+    background-color: var(--color-black);
+    transition: all 0.4s ease-in-out;
+}
+
+.header-content .left-content .imgs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.header-content .left-content .imgs img:hover {
+    filter: grayscale(0);
+}
+
+.header-content .right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 18rem;
+}
+
+.header-content .right-content .name {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.header-content .right-content .name span {
+    color: var(--color-secondary);
+}
+
+.header-content .right-content p {
+    margin: 1.5rem 0;
+    line-height: 2rem;
+}
+.right-content .main-btn {
+    width:50%;
+    height: 40px;
+    border: 1px solid var(--color-white);
+    overflow: hidden;
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+ .right-content .main-btn .download {
+    background-color: transparent;
+    font-weight: bold;
+    
+}
+.right-content .main-btn i {
+    background-color: var(--color-primary);
+} 
+
+
+/* .header-content .right-content .download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50px;
+    overflow: hidden;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-secondary);
+   
+    
+}
+.header-content .right-content .download i {
+    background-color: var(--color-secondary);
+    padding-left: 35px;
+}  */
+
+
+
+
+
+/* .header-content {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    height: 100%;
+    
+} */
+/* .head-shep{
+    position: relative;
+    top: 40px;
+    left: 20px;
+    width: 40%;
+    height: 120%;
+    background: transparent; 
+    background-color: var(--colot-black);
+    
+} */
+/* .left-content {
+    height: 50%;
+    width: 50%;
+}
+img{
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    width: 30%;
+    height: 60%;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid var(--colot-black);
+    transition: all .4s ease-in-out;     
+}
+.right-conten {
+    padding-top: 20%;
+    
+}*/
+
+/*contact section */
+.sec5 .contact-content {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    
+}
+.contact-content,h1 {
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+    
